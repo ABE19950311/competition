@@ -1,0 +1,12 @@
+var countCompleteDayPairs = function(hours) {
+    let count = 0
+    for(let i=0;i<hours.length;i++) {
+        for(let j=i+1;j<hours.length;j++) {
+            if((hours[i]+hours[j])%24==0) {
+                count++
+            }
+        }
+    }
+    return count
+};
+//２４時間周期になる要素ペアの合計返す
